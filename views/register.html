@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--추가-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700&display=swap');
+     </style>
+     <title>My Pt</title>
+</head>
+<body>
+    <!--추가-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+<nav>
+
+    <ul>
+
+        <div class="navBar">
+
+            <li class="navLogo">
+                <div><a href="/">My pt</a></div>
+            </li>
+
+            <li>
+                <div class="navMenuContainer">
+                    <div class="dropDown">
+                        <div class="navMenu dropDownMenu navTutorial">Tutorial</div>
+                        <div class="dropDownContent">
+                            <div class="navTutorial tutorialSquat">Squat</div>
+                            <div class="navTutorial tutoriaSideLunge">Side Lunge</div>
+                            <div class="navTutorial tutorialPlank">Plank</div>
+                            <div class="navTutorial tutorialShoulderPress">Shoulder Press</div>
+                        </div>
+                    </div>
+                    <div class="navMenu">My page</div>
+                    <div class="navMenu">Record</div>
+                    <div class="navMenu"><a href="/boardlist">Community</a></div>
+                </div>
+            </li>
+        
+            <li>
+                <div class="navLogin"><a href="/login">Login</a></div>
+            </li>
+
+        </div>
+
+        <li class="navMenu hidden">
+            <div class="navMenuBtn">
+                <img src="navMenuBtn.png" alt="메뉴 햄버거 아이콘">
+            </div>
+        </li>
+
+    </ul>
+
+</nav>
+    
+            <div class="loginLogo">
+                <div>My pt</div>
+            </div>
+    
+    <div class="loginContainer">
+        <form class="signupBox" action="/register" method="POST">    
+            <div class="signupDescription">
+                <div>회원가입</div>
+                <div>가입을 통해 다양한 서비스를 만나보세요!</div>
+            </div>
+
+            <div class="signupProfile">
+                <form action="/register" method="POST"> <!--추가-->
+                    <div class="profileId">
+                        <label for="id" class="form-label">아이디</label>
+                        <input type="text" placeholder="6자~20자" id="id" class="form-control" name="id">
+                        <!--name="id": 폼 데이터가 서버로 전송될 때 이름이 id인 데이터가 전송됨-->
+                        <div class="notice hidden">영문 소문자, 숫자를 포함한 6~20자를 입력하세요.</div>
+                    </div>
+
+                    <div class="profilePwd">
+                        <label for="pw" class="form-label">비밀번호</label>
+                        <input type="password" placeholder="문자, 숫자, 특수문자 포함 8자~20자" id="pw" class="form-control" name="pw">
+                        <div class="notice hidden">영문 대문자, 소문자, 숫자, 특수문자를 포함한 8~20자를 입력하세요.</div>
+                        <label for="pwdConfirm">비밀번호 재확인</label>
+                        <input type="password" id="pwdConfirm">
+                        <div class="notice hidden">비밀번호가 일치하지 않습니다.</div>
+                    </div>
+
+                    <div class="profileName">
+                        <label for="name" class="form-label">이름</label>
+                        <input type="text" id="name" class="form-control" name="name">
+                        <div class="notice hidden"></div>
+                    </div>
+
+                    <div class="profileEmail">
+                        <label for="email" class="form-label">이메일</label>
+                        <input type="text" class="emailLocal form-control" id="emailLocal" name="emailLocal">
+                        <span>@</span>
+                        <input type="text" class="emailDomain" id="emailDomain" name="emailDomain">
+                        <select class="emailSelect" name="emailSelect">
+                            <option value="type">직접 입력</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="daum.net">daum.net</option>
+                            <option value="hanmail.com">hanmail.com</option>
+                        </select>
+                        <div class="notice hidden localNotice">이메일 로컬의 형식을 정확하게 입력하세요.</div>
+                        <div class="notice hidden domainNotice">이메일 도메인의 형식을 정확하게 입력하세요.</div>
+                    </div>
+
+                    <div class="profileBirth">
+                        <label for="birth" class="form-label">생년월일</label>
+                        <input type="text" placeholder="년(4자)" class="year" class="form-control" name="year">
+                        <select class="month" name="month">
+                            <option value="type">월</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <input type="text" placeholder="일" class="day" class="form-control" name="day">
+                        <div class="notice hidden yearNotice">태어난 년도 4자리를 정확히 입력하세요.</div>
+                        <div class="notice hidden monthNotice">태어난 월을 선택하세요.</div>
+                        <div class="notice hidden dayNotice">태어난 일(날짜) 2자리를 정확하게 입력하세요.</div>
+                    </div>
+                    
+                    <div class="signupBtn">
+                        <button>가입하기</button>
+                    </div>
+                </form>
+            </div>
+        </form>
+    </div>
+
+    <div class="tutorialContainer hidden">
+        <div class="tutorialBox tutorialSquatBox hidden">
+            <iframe class="tutorialVideo" src="https://www.youtube.com/embed/aclHkVaku9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="tutorialBox tutoriaSideLungeBox hidden">
+            <iframe class="tutorialVideo" src="https://www.youtube.com/embed/QOVaHwm-Q6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="tutorialBox tutorialPlankBox hidden">
+            <iframe class="tutorialVideo" src="https://www.youtube.com/embed/1IJp0aPcXtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="tutorialBox tutorialShoulderPressBox hidden">
+            <iframe class="tutorialVideo" src="https://www.youtube.com/embed/kGooAJM3294" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <!--<script src="login.js"></script>-->
+</body>
+</html>

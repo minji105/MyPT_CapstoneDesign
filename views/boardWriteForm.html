@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="board.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700&display=swap');
+     </style>
+     <title>My Pt / board</title>
+</head>
+<body>
+    <nav>
+
+        <ul>
+
+            <div class="navBar">
+
+                <li class="navLogo">
+                    <div><a href="/">My pt</a></div>
+                </li>
+
+                <li>
+                    <div class="navMenuContainer">
+                        <div class="dropDown">
+                            <div class="navMenu dropDownMenu navTutorial">Tutorial</div>
+                            <div class="dropDownContent">
+                                <div class="navTutorial tutorialSquat">Squat</div>
+                                <div class="navTutorial tutoriaSideLunge">Side Lunge</div>
+                                <div class="navTutorial tutorialPlank">Plank</div>
+                                <div class="navTutorial tutorialShoulderPress">Shoulder Press</div>
+                            </div>
+                        </div>
+                        <div class="navMenu">My page</div>
+                        <div class="navMenu">Record</div>
+                        <div class="navMenu"><a href="/boardlist">Community</a></div>
+                    </div>
+                </li>
+            
+                <li>
+                    <div class="navLogin"><a href="/login">Login</a></div>
+                </li>
+
+            </div>
+
+            <li class="navMenu hidden">
+                <div class="navMenuBtn">
+                    <img src="navMenuBtn.png" alt="메뉴 햄버거 아이콘">
+                </div>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <form id="boardWriteFormContainer" name="boardWriteFormContainer" method="" action="">
+        <div id="boardWriteForm">
+            <div class="explainForm">제목</div>
+            <input name="title" class="inputForm" id="titleForm" type="text" placeholder="글 제목을 입력해주세요." required>
+            <div class="explainForm">작성자</div>
+            <div></div>
+            <div class="explainForm">내용</div>
+            <textarea name="content" class="inputForm" id="contentForm" placeholder="글 내용을 입력해주세요." required></textarea>
+        </div>
+        <div id="boardWriteBtn">
+            <a id="boardListBtn" href="/boardlist"><input class="smallBtn" type="button" value="목록"></a>
+            <input class="smallBtn" id="saveBtn" type="submit" value="저장">
+        </div>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
